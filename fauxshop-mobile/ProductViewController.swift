@@ -11,12 +11,14 @@ import UIKit
 class ProductViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var products = [Products]()
-    let productId = 0;
+    var productId = 0;
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        productId = 0
         
         collectionView.dataSource = self
         
@@ -48,6 +50,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
         
+        self.productId = indexPath.item + 1
     }
     
     func retrieveProducts() {
@@ -71,5 +74,13 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
             
             }.resume()
         
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let productDetailViewController = segue.destination as! ProductDetailViewController
+        
+        productDetailViewController.productId = self.productId
     }
 }

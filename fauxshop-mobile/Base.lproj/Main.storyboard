@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="-3282.4000000000001" y="-626.53673163418296"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Detail View Controller-->
         <scene sceneID="Drw-m4-V51">
             <objects>
-                <viewController id="7kU-lr-DGh" sceneMemberID="viewController">
+                <viewController id="7kU-lr-DGh" customClass="ProductDetailViewController" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RwZ-Yi-xHk" customClass="ProductDetailView" customModule="fauxshop_mobile" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,6 +351,9 @@
                             <outlet property="productName" destination="enc-AN-e6Q" id="AOW-QA-4Hg"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="productName" destination="enc-AN-e6Q" id="gjK-j6-B8J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVw-ZZ-Ltz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
