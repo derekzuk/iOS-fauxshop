@@ -1,5 +1,5 @@
 //
-//  ProductDetailViewController.swift
+//  InitialLoginViewController.swift
 //  fauxshop-mobile
 //
 //  Created by Derek Zuk on 3/9/18.
@@ -8,29 +8,31 @@
 
 import UIKit
 
-class ProductDetailViewController: UIViewController {
+class InitialLoginViewController: UIViewController {
 
-    var product: Products?
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var productDescription: UITextView!
-    @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productPrice: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        productName.text = String(describing: self.product!.productsName)
-        productDescription.text = String(self.product!.productsDescription)
-        let priceValue = self.product!.productsPrice
-        productPrice.text = String(format: "$%.02f", priceValue)
-        productImage.image = UIImage(named: product!.productsImage)
-        
-        print(self.product!)
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")        
+        if (!isUserLoggedIn){
+            self.performSegue(withIdentifier: "loginView", sender: self)
+        }
+    }
+    
+    
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+        UserDefaults.standard.synchronize()
+        self.performSegue(withIdentifier: "loginView", sender: self)
     }
     
 
