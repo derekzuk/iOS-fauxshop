@@ -303,7 +303,6 @@
                                             <outlet property="imageView" destination="aOE-MZ-JjA" id="jeT-PF-3eN"/>
                                             <outlet property="price" destination="kpF-h5-rji" id="LfO-a0-B23"/>
                                             <outlet property="productDescription" destination="61a-gU-Koo" id="IAV-7X-V3v"/>
-                                            <segue destination="7kU-lr-DGh" kind="show" id="KiS-n3-9tL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -323,6 +322,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4YR-Mp-Qhw" id="pm8-fy-06Z"/>
+                        <segue destination="7kU-lr-DGh" kind="show" identifier="showProductDetail" id="TrJ-Vh-w8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kh-vn-5uS" userLabel="First Responder" sceneMemberID="firstResponder"/>

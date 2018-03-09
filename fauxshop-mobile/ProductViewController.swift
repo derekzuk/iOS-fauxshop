@@ -51,6 +51,11 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         print("You selected cell #\(indexPath.item)!")
         
         self.productId = indexPath.item + 1
+        
+        // This is the only location it is correct for some reason
+        print(self.productId)
+        
+        self.performSegue(withIdentifier: "showProductDetail", sender: self)
     }
     
     func retrieveProducts() {
@@ -76,11 +81,14 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         
     }
     
-    // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let productDetailViewController = segue.destination as! ProductDetailViewController
+        if (segue.identifier == "showProductDetail") {
+                    print(self.productId)
+            let productDetailViewController = segue.destination as! ProductDetailViewController
+            
+            productDetailViewController.productId = self.productId
+        }
         
-        productDetailViewController.productId = self.productId
     }
 }
