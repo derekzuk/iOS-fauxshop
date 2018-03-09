@@ -474,7 +474,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="productImage" translatesAutoresizingMaskIntoConstraints="NO" id="wrV-hx-hIb">
                                 <rect key="frame" x="0.0" y="64" width="375" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="productDescription" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="umR-QY-DpI">
                                 <rect key="frame" x="16" y="462" width="343" height="128"/>
@@ -494,9 +494,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ALi-eK-0bE"/>
-                        <connections>
-                            <outlet property="productName" destination="enc-AN-e6Q" id="AOW-QA-4Hg"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="productDescription" destination="umR-QY-DpI" id="f0V-8F-0Iy"/>

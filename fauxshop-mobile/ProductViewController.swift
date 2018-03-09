@@ -39,6 +39,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         let priceValue = products[indexPath.row].productsPrice
         cell.price.text = String(format: "$%.02f", priceValue)
         cell.productDescription.text = products[indexPath.row].productsName
+        cell.imageView.image = #imageLiteral(resourceName: "vase_1a")
         
         
         return cell;
