@@ -10,16 +10,15 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
 
-    var productId: Int?
     var product: Products?
     @IBOutlet weak var productName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("in ProductDetailViewController")
-        print(self.productId ?? -1)
-        productName.text = String(describing: self.productId!)
+        productName.text = String(describing: self.product!.productsName)
+        
+        print(self.product!)
     }
 
     override func didReceiveMemoryWarning() {

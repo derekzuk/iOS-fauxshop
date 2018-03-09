@@ -11,14 +11,12 @@ import UIKit
 class ProductViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var products = [Products]()
-    var productId = 0;
+    var product: Products?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        productId = 0
         
         collectionView.dataSource = self
         
@@ -50,11 +48,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
         
-        self.productId = indexPath.item + 1
-        
-        // This is the only location it is correct for some reason
-        print(self.productId)
-        
+        self.product = products[indexPath.item]
         self.performSegue(withIdentifier: "showProductDetail", sender: self)
     }
     
@@ -84,10 +78,9 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "showProductDetail") {
-                    print(self.productId)
             let productDetailViewController = segue.destination as! ProductDetailViewController
-            
-            productDetailViewController.productId = self.productId
+
+            productDetailViewController.product = self.product!
         }
         
     }
