@@ -65,8 +65,35 @@ class RegisterViewController: UIViewController {
         })
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
+    
         
-
+        
+        // TODO: this works, but we need it to return an alarm if the request fails
+        let registerDictionary = [
+            "login": userEmail,
+            "email": userEmail,
+            "password": userPassword,
+            "langKey": "en"
+        ]
+        print(registerDictionary);
+        let url = URL(string: "http://localhost:8080/api/register")!
+        let headers = [ "Content-Type": "application/json" ]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: registerDictionary)
+        request.allHTTPHeaderFields = headers
+        print(request);
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
+        }
+        task.resume()
     }
 
     func displayAlertMessage(userMessage:String) {
