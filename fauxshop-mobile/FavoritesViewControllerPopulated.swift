@@ -1,5 +1,5 @@
 //
-//  FavoritesViewController.swift
+//  FavoritesViewControllerPopulated.swift
 //  fauxshop-mobile
 //
 //  Created by Derek Zuk on 3/10/18.
@@ -8,19 +8,12 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
-
+class FavoritesViewControllerPopulated: UIViewController {
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
-        if (!isUserLoggedIn){
-            self.performSegue(withIdentifier: "favoritesNotLoggedInView", sender: self)
-        }
-        
-        
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

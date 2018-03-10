@@ -1,5 +1,5 @@
 //
-//  FavoritesNotLoggedInView.swift
+//  FavoritesViewController.swift
 //  fauxshop-mobile
 //
 //  Created by Derek Zuk on 3/10/18.
@@ -8,32 +8,35 @@
 
 import UIKit
 
-class FavoritesNotLoggedInViewController: UIViewController, UITabBarControllerDelegate {
+class FavoritesViewControllerNone: UIViewController, UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let tabBarIndex = tabBarController.selectedIndex
         if tabBarIndex == 0 {
             let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
             if (!isUserLoggedIn){
-                // We're already here
+                self.performSegue(withIdentifier: "favoritesNotLoggedInView", sender: self)
             } else {
                 // User is logged in. Check if there are any favorites.
                 let isPopulated = false;
                 if (!isPopulated) {
-                    self.performSegue(withIdentifier: "favoritesLoggedInViewNone", sender: self)
+                    // We're already here
                 } else {
                     self.performSegue(withIdentifier: "favoritesLoggedInViewPopulated", sender: self)
                 }
             }
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         self.tabBarController?.delegate = self
         
-    }
+        
 
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

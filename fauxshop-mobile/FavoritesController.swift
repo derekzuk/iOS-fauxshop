@@ -17,7 +17,13 @@ class FavoritesController: UINavigationController {
         if (!isUserLoggedIn){
             self.performSegue(withIdentifier: "favoritesNotLoggedInView", sender: self)
         } else {
-            self.performSegue(withIdentifier: "favoritesView", sender: self)
+                // User is logged in. Check if there are any favorites.
+            let isPopulated = false;
+            if (!isPopulated) {
+                self.performSegue(withIdentifier: "favoritesLoggedInViewNone", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "favoritesLoggedInViewPopulated", sender: self)
+            }
         }
     }
     
