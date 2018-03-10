@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kkJ-6X-Qa2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kkJ-6X-Qa2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -242,6 +242,30 @@
             </objects>
             <point key="canvasLocation" x="-338" y="791"/>
         </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="cxk-ig-aIj">
+            <objects>
+                <viewController id="DwV-8n-oQG" customClass="FavoritesViewController" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mob-LB-i35">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUk-sS-Ngf">
+                                <rect key="frame" x="133" y="191" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7dK-mD-Bmq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yT-Wo-9T0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2186.4000000000001" y="-625.63718140929541"/>
+        </scene>
         <!--Search-->
         <scene sceneID="OBg-AY-DkZ">
             <objects>
@@ -285,21 +309,29 @@
             </objects>
             <point key="canvasLocation" x="-1367.2" y="-645.42728635682158"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="Zep-Yy-fvQ">
+        <!--Favorites Not Logged In View Controller-->
+        <scene sceneID="MLu-kM-zr6">
             <objects>
-                <viewController title="Favorites" id="Pqp-sl-cTK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OXM-27-cfA">
+                <viewController id="EvQ-FP-9el" customClass="FavoritesNotLoggedInViewController" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5QZ-HT-26d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not logged in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-k3-bsz">
+                                <rect key="frame" x="136" y="215" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="lGN-u8-21j"/>
+                        <viewLayoutGuide key="safeArea" id="Wsw-dO-8wm"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zcs-i9-Jpe"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bc6-dy-AaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOU-Va-hOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2391" y="-645"/>
+            <point key="canvasLocation" x="-3070" y="-625"/>
         </scene>
         <!--You-->
         <scene sceneID="Dlr-aa-4FJ">
@@ -346,7 +378,7 @@
         <!--Favorites-->
         <scene sceneID="J7H-ph-Sdz">
             <objects>
-                <navigationController title="Favorites" automaticallyAdjustsScrollViewInsets="NO" id="shV-8q-wov" sceneMemberID="viewController">
+                <navigationController title="Favorites" automaticallyAdjustsScrollViewInsets="NO" id="shV-8q-wov" customClass="FavoritesController" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="v3D-YM-ELM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oy4-WS-DEO">
@@ -355,12 +387,13 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Pqp-sl-cTK" kind="relationship" relationship="rootViewController" id="MVV-nf-k6G"/>
+                        <segue destination="EvQ-FP-9el" kind="show" identifier="favoritesNotLoggedInView" animates="NO" id="DUm-9r-kZu"/>
+                        <segue destination="DwV-8n-oQG" kind="show" identifier="favoritesView" animates="NO" id="Kay-5k-BMz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sl-fI-UpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2390" y="-1406"/>
+            <point key="canvasLocation" x="-2634" y="-1406"/>
         </scene>
         <!--Home-->
         <scene sceneID="9ef-IX-FiI">
@@ -379,7 +412,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8X-AU-Fze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3282" y="-1403"/>
+            <point key="canvasLocation" x="-4052" y="-1405"/>
         </scene>
         <!--Fauxshop-->
         <scene sceneID="TC8-jH-nMD">
@@ -445,8 +478,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Fauxshop" id="Ilf-qI-71b">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ImQ-rF-7pV"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="fb4-ee-abZ"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Krc-Et-bY8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4YR-Mp-Qhw" id="pm8-fy-06Z"/>
@@ -455,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kh-vn-5uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3282.4000000000001" y="-626.53673163418296"/>
+            <point key="canvasLocation" x="-4006" y="-625"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="Drw-m4-V51">
@@ -504,7 +535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVw-ZZ-Ltz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3274.4000000000001" y="128.18590704647679"/>
+            <point key="canvasLocation" x="-4007" y="140"/>
         </scene>
         <!--Cart-->
         <scene sceneID="UQ6-eA-vxb">

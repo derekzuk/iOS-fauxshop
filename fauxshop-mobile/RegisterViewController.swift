@@ -75,14 +75,14 @@ class RegisterViewController: UIViewController {
             "password": userPassword,
             "langKey": "en"
         ]
-        print(registerDictionary);
         let url = URL(string: "http://localhost:8080/api/register")!
         let headers = [ "Content-Type": "application/json" ]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject: registerDictionary)
         request.allHTTPHeaderFields = headers
-        print(request);
+        
+        // This is the actual REST API call. There's a more condensed method if you use Alamofire
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
@@ -90,6 +90,7 @@ class RegisterViewController: UIViewController {
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
+                // This doesn't seem to return anything
                 print(responseJSON)
             }
         }
