@@ -14,6 +14,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +57,15 @@ class RegisterViewController: UIViewController {
         
         // Display alert message with confirmation
         let myAlert = UIAlertController(title:"Success", message:"Registration is successful", preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default){
-            action in
-            self.dismiss(animated: true, completion: nil)
-        }
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {
+            (action) in
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewIdentifier")
+            self.navigationController?.pushViewController(loginViewController!, animated: true)
+        })
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
+        
+
     }
 
     func displayAlertMessage(userMessage:String) {

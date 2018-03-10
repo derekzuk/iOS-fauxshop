@@ -13,6 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +40,9 @@ class LoginViewController: UIViewController {
             // Login is successful
             UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
             UserDefaults.standard.synchronize()
-            self.dismiss(animated: true, completion: nil)
+            
+            let initialLoginViewController = self.storyboard?.instantiateViewController(withIdentifier: "initialLoginViewControllerIdentifier")
+            self.navigationController?.pushViewController(initialLoginViewController!, animated: true)
         } else {
             // Display alert message
         }
