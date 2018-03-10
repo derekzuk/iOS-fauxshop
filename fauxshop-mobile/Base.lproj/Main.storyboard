@@ -461,7 +461,7 @@
         <scene sceneID="Drw-m4-V51">
             <objects>
                 <viewController id="7kU-lr-DGh" customClass="ProductDetailViewController" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RwZ-Yi-xHk" customClass="ProductDetailView" customModule="fauxshop_mobile" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="RwZ-Yi-xHk" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
