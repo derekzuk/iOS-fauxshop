@@ -13,10 +13,7 @@
 		020243D4204E33B9002C2440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020243D3204E33B9002C2440 /* Assets.xcassets */; };
 		020243E2204E33B9002C2440 /* fauxshop_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020243E1204E33B9002C2440 /* fauxshop_mobileTests.swift */; };
 		020243ED204E33B9002C2440 /* fauxshop_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020243EC204E33B9002C2440 /* fauxshop_mobileUITests.swift */; };
-		024F6A4D20547595007E1CFD /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F6A4C20547595007E1CFD /* FavoritesController.swift */; };
-		024F6A4F20547678007E1CFD /* FavoritesViewControllerNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F6A4E20547678007E1CFD /* FavoritesViewControllerNone.swift */; };
-		024F6A5120547BF0007E1CFD /* FavoritesNotLoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F6A5020547BF0007E1CFD /* FavoritesNotLoggedInViewController.swift */; };
-		024F6A532054811B007E1CFD /* FavoritesViewControllerPopulated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F6A522054811B007E1CFD /* FavoritesViewControllerPopulated.swift */; };
+		024F6A5120547BF0007E1CFD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F6A5020547BF0007E1CFD /* FavoritesViewController.swift */; };
 		0266095420534D6B006CB63A /* InitialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266095320534D6B006CB63A /* InitialLoginViewController.swift */; };
 		02D7CE25204FD19900CEB475 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE24204FD19900CEB475 /* ProductViewController.swift */; };
 		02D7CE27205070CF00CEB475 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE26205070CF00CEB475 /* CustomCollectionViewCell.swift */; };
@@ -56,10 +53,7 @@
 		020243E8204E33B9002C2440 /* fauxshop-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fauxshop-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		020243EC204E33B9002C2440 /* fauxshop_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fauxshop_mobileUITests.swift; sourceTree = "<group>"; };
 		020243EE204E33B9002C2440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		024F6A4C20547595007E1CFD /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
-		024F6A4E20547678007E1CFD /* FavoritesViewControllerNone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewControllerNone.swift; sourceTree = "<group>"; };
-		024F6A5020547BF0007E1CFD /* FavoritesNotLoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesNotLoggedInViewController.swift; sourceTree = "<group>"; };
-		024F6A522054811B007E1CFD /* FavoritesViewControllerPopulated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewControllerPopulated.swift; sourceTree = "<group>"; };
+		024F6A5020547BF0007E1CFD /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		0266095320534D6B006CB63A /* InitialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginViewController.swift; sourceTree = "<group>"; };
 		02D7CE24204FD19900CEB475 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		02D7CE26205070CF00CEB475 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -119,20 +113,17 @@
 			children = (
 				020243CC204E33B9002C2440 /* AppDelegate.swift */,
 				020243CE204E33B9002C2440 /* TabBarController.swift */,
-				02D7CE24204FD19900CEB475 /* ProductViewController.swift */,
 				02D7CE26205070CF00CEB475 /* CustomCollectionViewCell.swift */,
 				020243D0204E33B9002C2440 /* Main.storyboard */,
 				020243D3204E33B9002C2440 /* Assets.xcassets */,
 				020243D8204E33B9002C2440 /* Info.plist */,
+				02D7CE24204FD19900CEB475 /* ProductViewController.swift */,
 				02D7CE28205077EE00CEB475 /* Products.swift */,
 				02D7CE30205257CC00CEB475 /* ProductDetailViewController.swift */,
+				0266095320534D6B006CB63A /* InitialLoginViewController.swift */,
 				02D7CE3220533EA500CEB475 /* LoginViewController.swift */,
 				02D7CE342053402A00CEB475 /* RegisterViewController.swift */,
-				0266095320534D6B006CB63A /* InitialLoginViewController.swift */,
-				024F6A4C20547595007E1CFD /* FavoritesController.swift */,
-				024F6A4E20547678007E1CFD /* FavoritesViewControllerNone.swift */,
-				024F6A5020547BF0007E1CFD /* FavoritesNotLoggedInViewController.swift */,
-				024F6A522054811B007E1CFD /* FavoritesViewControllerPopulated.swift */,
+				024F6A5020547BF0007E1CFD /* FavoritesViewController.swift */,
 			);
 			path = "fauxshop-mobile";
 			sourceTree = "<group>";
@@ -289,18 +280,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				02D7CE352053402A00CEB475 /* RegisterViewController.swift in Sources */,
-				024F6A5120547BF0007E1CFD /* FavoritesNotLoggedInViewController.swift in Sources */,
+				024F6A5120547BF0007E1CFD /* FavoritesViewController.swift in Sources */,
 				02D7CE27205070CF00CEB475 /* CustomCollectionViewCell.swift in Sources */,
 				020243CF204E33B9002C2440 /* TabBarController.swift in Sources */,
 				02D7CE31205257CC00CEB475 /* ProductDetailViewController.swift in Sources */,
 				02D7CE29205077EE00CEB475 /* Products.swift in Sources */,
 				02D7CE3320533EA500CEB475 /* LoginViewController.swift in Sources */,
-				024F6A4F20547678007E1CFD /* FavoritesViewControllerNone.swift in Sources */,
 				0266095420534D6B006CB63A /* InitialLoginViewController.swift in Sources */,
-				024F6A4D20547595007E1CFD /* FavoritesController.swift in Sources */,
 				02D7CE25204FD19900CEB475 /* ProductViewController.swift in Sources */,
 				020243CD204E33B9002C2440 /* AppDelegate.swift in Sources */,
-				024F6A532054811B007E1CFD /* FavoritesViewControllerPopulated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
