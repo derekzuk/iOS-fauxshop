@@ -127,11 +127,11 @@
 		020243CB204E33B9002C2440 /* fauxshop-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				020243D3204E33B9002C2440 /* Assets.xcassets */,
 				020243CC204E33B9002C2440 /* AppDelegate.swift */,
 				020243CE204E33B9002C2440 /* TabBarController.swift */,
 				02D7CE26205070CF00CEB475 /* CustomCollectionViewCell.swift */,
 				020243D0204E33B9002C2440 /* Main.storyboard */,
-				020243D3204E33B9002C2440 /* Assets.xcassets */,
 				020243D8204E33B9002C2440 /* Info.plist */,
 				02D7CE24204FD19900CEB475 /* ProductViewController.swift */,
 				02D7CE28205077EE00CEB475 /* Products.swift */,

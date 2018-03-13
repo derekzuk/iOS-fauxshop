@@ -14,6 +14,7 @@ struct Products: Decodable {
     let productsQuantity: Int
     let productsModel: String
     let productsImage: String
+    let productsImageMobile: String
     var productsPrice: Double
     let productsDateAdded: String
     let productsLastModified: String
@@ -26,23 +27,4 @@ struct Products: Decodable {
     let productsName: String
     let productsURL: String
     let productsViewed: Int
-    
-//    init() {
-//        productsId = 0
-//        productsQuantity = 0
-//        productsModel = "productsModel"
-//        productsImage = "productsImage"
-//        productsPrice = 0
-//        productsDateAdded = "productsDateAdded"
-//        productsLastModified = "productsLastModified"
-//        productsDateAvailable = "productsDateAvailable"
-//        productsWeight = 0
-//        productsStatus = true
-//        productsTaxClassId = 0
-//        manufacturersId = 0
-//        productsDescription = "productsDescription"
-//        productsName = "productsName"
-//        productsURL = "productsURL"
-//        productsViewed = 0
-//    }
 }

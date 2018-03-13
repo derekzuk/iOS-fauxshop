@@ -23,10 +23,7 @@ class ProductDetailViewController: UIViewController {
         productDescription.text = String(self.product!.productsDescription)
         let priceValue = self.product!.productsPrice
         productPrice.text = String(format: "$%.02f", priceValue)
-        
-        // TODO: update the API to return the correct image
-        // productImage.image = UIImage(named: "product!.productsImage")
-        productImage.image = UIImage(named: "vase_1a")
+        productImage.image = UIImage(named: self.product!.productsImageMobile)
         
         print(self.product!)
     }
