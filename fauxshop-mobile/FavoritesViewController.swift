@@ -22,7 +22,7 @@ class FavoritesViewController: UIViewController {
         FavoritesNoneView.isHidden = true
         FavoritesNotLoggedInView.isHidden = true
         
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        let isUserLoggedIn = (UserDefaults.standard.object(forKey: "authenticationToken") != nil)        
         if (!isUserLoggedIn){
             FavoritesNotLoggedInView.isHidden = false;
             FavoritesPopulatedView.isHidden = true;

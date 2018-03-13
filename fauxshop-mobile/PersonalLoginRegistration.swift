@@ -18,6 +18,7 @@ class PersonalLoginRegistration: UIViewController {
     // Personal View
     @IBAction func logoutButtonTapped(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+        UserDefaults.standard.removeObject(forKey: "authenticationToken")
         UserDefaults.standard.synchronize()
         
         displayLoginView()
@@ -69,8 +70,14 @@ class PersonalLoginRegistration: UIViewController {
                             
                             print("successfully decoded")
                             print(decoded)
+                            UserDefaults.standard.set(hash!, forKey:"authenticationToken")
                             UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
                             UserDefaults.standard.synchronize()
+                            
+                            // Navigate to Personal View after login is successful
+                            DispatchQueue.main.async() { () -> Void in
+                                self.displayPersonalView()
+                            }
                         } catch {
                             print("Failed to decode JWT: \(error)")
                         }
@@ -82,15 +89,18 @@ class PersonalLoginRegistration: UIViewController {
             }
         }
         task.resume()
-        
-        // TODO: we only want to do this if login is successful
-        displayPersonalView()
     }
+    
     
     // Register View
     @IBOutlet weak var registerEmailText: UITextField!
     @IBOutlet weak var registerPasswordText: UITextField!
     @IBOutlet weak var registerRepeatPasswordText: UITextField!
+    
+    @IBAction func backToLoginPageTapped(_ sender: Any) {
+        displayLoginView()
+    }
+    
     @IBAction func registerViewButtonTapped(_ sender: Any) {
         let userEmail = registerEmailText.text!
         let userPassword = registerPasswordText.text!
