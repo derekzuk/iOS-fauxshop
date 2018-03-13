@@ -9,7 +9,7 @@
 import UIKit
 import JWT
 
-class InitialLoginViewController: UIViewController {
+class PersonalLoginRegistration: UIViewController {
 
     @IBOutlet weak var Personal: UIView!
     @IBOutlet weak var Login: UIView!

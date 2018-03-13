@@ -14,14 +14,12 @@
 		020243E2204E33B9002C2440 /* fauxshop_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020243E1204E33B9002C2440 /* fauxshop_mobileTests.swift */; };
 		020243ED204E33B9002C2440 /* fauxshop_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020243EC204E33B9002C2440 /* fauxshop_mobileUITests.swift */; };
 		024F6A5120547BF0007E1CFD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F6A5020547BF0007E1CFD /* FavoritesViewController.swift */; };
-		0266095420534D6B006CB63A /* InitialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266095320534D6B006CB63A /* InitialLoginViewController.swift */; };
+		0266095420534D6B006CB63A /* PersonalLoginRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266095320534D6B006CB63A /* PersonalLoginRegistration.swift */; };
 		02BB2DA02054D95900A92B8B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 02BB2D9F2054D95900A92B8B /* Podfile */; };
 		02D7CE25204FD19900CEB475 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE24204FD19900CEB475 /* ProductViewController.swift */; };
 		02D7CE27205070CF00CEB475 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE26205070CF00CEB475 /* CustomCollectionViewCell.swift */; };
 		02D7CE29205077EE00CEB475 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE28205077EE00CEB475 /* Products.swift */; };
 		02D7CE31205257CC00CEB475 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE30205257CC00CEB475 /* ProductDetailViewController.swift */; };
-		02D7CE3320533EA500CEB475 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE3220533EA500CEB475 /* LoginViewController.swift */; };
-		02D7CE352053402A00CEB475 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D7CE342053402A00CEB475 /* RegisterViewController.swift */; };
 		4B64B6AE68174B9C1D1A8B77 /* Pods_fauxshop_mobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDF737DAF32186A5003BE7C /* Pods_fauxshop_mobileTests.framework */; };
 		89634F75355AC689D39903D8 /* Pods_fauxshop_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75123EA4679AF357D6F43694 /* Pods_fauxshop_mobile.framework */; };
 		D4345390E9562C6689E0A8D9 /* Pods_fauxshop_mobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE3740DCD1E1B7E94E01257 /* Pods_fauxshop_mobileUITests.framework */; };
@@ -58,14 +56,12 @@
 		020243EC204E33B9002C2440 /* fauxshop_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fauxshop_mobileUITests.swift; sourceTree = "<group>"; };
 		020243EE204E33B9002C2440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F6A5020547BF0007E1CFD /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		0266095320534D6B006CB63A /* InitialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginViewController.swift; sourceTree = "<group>"; };
+		0266095320534D6B006CB63A /* PersonalLoginRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoginRegistration.swift; sourceTree = "<group>"; };
 		02BB2D9F2054D95900A92B8B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		02D7CE24204FD19900CEB475 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		02D7CE26205070CF00CEB475 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		02D7CE28205077EE00CEB475 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		02D7CE30205257CC00CEB475 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
-		02D7CE3220533EA500CEB475 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		02D7CE342053402A00CEB475 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0C4C094BD9C0E2DCC037BBA3 /* Pods-fauxshop-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fauxshop-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fauxshop-mobile/Pods-fauxshop-mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		20CB54E9FF7A3718AFABBEA1 /* Pods-fauxshop-mobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fauxshop-mobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fauxshop-mobileUITests/Pods-fauxshop-mobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EDF737DAF32186A5003BE7C /* Pods_fauxshop_mobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fauxshop_mobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,9 +136,7 @@
 				02D7CE24204FD19900CEB475 /* ProductViewController.swift */,
 				02D7CE28205077EE00CEB475 /* Products.swift */,
 				02D7CE30205257CC00CEB475 /* ProductDetailViewController.swift */,
-				0266095320534D6B006CB63A /* InitialLoginViewController.swift */,
-				02D7CE3220533EA500CEB475 /* LoginViewController.swift */,
-				02D7CE342053402A00CEB475 /* RegisterViewController.swift */,
+				0266095320534D6B006CB63A /* PersonalLoginRegistration.swift */,
 				024F6A5020547BF0007E1CFD /* FavoritesViewController.swift */,
 			);
 			path = "fauxshop-mobile";
@@ -482,14 +476,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D7CE352053402A00CEB475 /* RegisterViewController.swift in Sources */,
 				024F6A5120547BF0007E1CFD /* FavoritesViewController.swift in Sources */,
 				02D7CE27205070CF00CEB475 /* CustomCollectionViewCell.swift in Sources */,
 				020243CF204E33B9002C2440 /* TabBarController.swift in Sources */,
 				02D7CE31205257CC00CEB475 /* ProductDetailViewController.swift in Sources */,
 				02D7CE29205077EE00CEB475 /* Products.swift in Sources */,
-				02D7CE3320533EA500CEB475 /* LoginViewController.swift in Sources */,
-				0266095420534D6B006CB63A /* InitialLoginViewController.swift in Sources */,
+				0266095420534D6B006CB63A /* PersonalLoginRegistration.swift in Sources */,
 				02D7CE25204FD19900CEB475 /* ProductViewController.swift in Sources */,
 				020243CD204E33B9002C2440 /* AppDelegate.swift in Sources */,
 			);

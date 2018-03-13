@@ -60,7 +60,7 @@
         <!--Sign In-->
         <scene sceneID="wsZ-by-bEx">
             <objects>
-                <viewController storyboardIdentifier="initialLoginViewControllerIdentifier" title="Sign In" id="A5v-II-FqS" customClass="InitialLoginViewController" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialLoginViewControllerIdentifier" title="Sign In" id="A5v-II-FqS" customClass="PersonalLoginRegistration" customModule="fauxshop_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AN0-cB-94I" userLabel="Personal Login Registration">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
