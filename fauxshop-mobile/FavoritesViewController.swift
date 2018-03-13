@@ -18,9 +18,9 @@ class FavoritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        FavoritesPopulatedView.isHidden = true;
-        FavoritesNoneView.isHidden = true;
-        FavoritesNotLoggedInView.isHidden = true;
+        FavoritesPopulatedView.isHidden = true
+        FavoritesNoneView.isHidden = true
+        FavoritesNotLoggedInView.isHidden = true
         
         let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
         if (!isUserLoggedIn){
