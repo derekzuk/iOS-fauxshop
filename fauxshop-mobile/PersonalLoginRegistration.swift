@@ -8,12 +8,16 @@
 
 import UIKit
 import JWT
+import KeychainSwift
 
 class PersonalLoginRegistration: UIViewController {
 
     @IBOutlet weak var Personal: UIView!
     @IBOutlet weak var Login: UIView!
     @IBOutlet weak var Register: UIView!
+    
+    var user: User?
+    let keychain = KeychainSwift()
     
     // Personal View
     @IBAction func logoutButtonTapped(_ sender: Any) {
@@ -49,7 +53,6 @@ class PersonalLoginRegistration: UIViewController {
         request.httpBody = try? JSONSerialization.data(withJSONObject: loginDictionary)
         request.allHTTPHeaderFields = headers
         
-        // There is a more condensed method if you use Alamofire
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
@@ -59,19 +62,22 @@ class PersonalLoginRegistration: UIViewController {
                 if (200 ... 299 ~= httpResponse.statusCode) {
                     let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
                     if let responseJSON = responseJSON as? [String: Any] {
-                        print(responseJSON)
                         
                         do {
                             let hash = responseJSON["id_token"] as? String
-                            print(hash!)
                             
                             let secret = Data(base64Encoded: "abcdefg12345", options: [])
                             let decoded = try JWT.decode(hash!, algorithm: .hs512(secret! as Data))
+                            let login = decoded["sub"]
+                            let auth = decoded["auth"]
                             
-                            print("successfully decoded")
-                            print(decoded)
+                            // Set the user data to be used in other API calls
+                            self.setUser(login:login as! String, userPassword:userPassword)
+
                             UserDefaults.standard.set(hash!, forKey:"authenticationToken")
                             UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
+                            UserDefaults.standard.set(login!, forKey:"login")
+                            UserDefaults.standard.set(auth!, forKey:"auth")
                             UserDefaults.standard.synchronize()
                             
                             // Navigate to Personal View after login is successful
@@ -91,6 +97,33 @@ class PersonalLoginRegistration: UIViewController {
         task.resume()
     }
     
+    func setUser(login: String, userPassword: String) {
+        let url = URL(string: "http://localhost:8080/api/account/\(login)/\(userPassword)")!
+        print(url)
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print("error in setUser")
+                print(error ?? "Error encountered printing the error")
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                if (200 ... 299 ~= httpResponse.statusCode) {
+                    do {
+                        self.user = try JSONDecoder().decode(User.self, from: data!)
+                        self.keychain.set(String(self.user!.id), forKey: "id")
+                        self.keychain.set(self.user!.login, forKey: "login")
+                    } catch {
+                        print("error decoding")
+                        print(error)
+                    }
+                } else {
+                    print("service call not successful")
+                }
+            }
+        }.resume()
+    }
+    
     
     // Register View
     @IBOutlet weak var registerEmailText: UITextField!
@@ -101,6 +134,8 @@ class PersonalLoginRegistration: UIViewController {
         displayLoginView()
     }
     
+    
+    // TODO: this method needs work
     @IBAction func registerViewButtonTapped(_ sender: Any) {
         let userEmail = registerEmailText.text!
         let userPassword = registerPasswordText.text!

@@ -7,99 +7,130 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		039D41FAE2DD868260758D89001EC69A /* HMACCommonCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */; };
-		1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */; };
+		039D41FAE2DD868260758D89001EC69A /* HMACCommonCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CDC854A5B5A53EE2E3F13F713D44C /* HMACCommonCrypto.swift */; };
+		08AA89D020B5C4FD74D1529A3E972AB9 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A2BDD4371CFD6F998B4631FF29CA18 /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1143D0083D7E5149D70736258DC762A0 /* Pods-fauxshop-mobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E5AE11FD7DDFDBC1C278D8093D65B0 /* Pods-fauxshop-mobile-dummy.m */; };
+		1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AE4BF7FF6A15FDF2E9A0CD9BA493D /* JWT.swift */; };
 		2685CA45503664A2961B7C604A63CB47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		28DBA47B07C65D0731DB8D540D81BB9A /* Pods-fauxshop-mobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E5AE11FD7DDFDBC1C278D8093D65B0 /* Pods-fauxshop-mobile-dummy.m */; };
-		38EFD4DAE44BA23B4D9C9039F8904D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3BFCB70093CDC6323C4CDC56A8309182 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0C7DBD85D9C446CF41B5A4C2EF362 /* Claims.swift */; };
-		43CB9FBF4F563866570B3AADCC6E6949 /* ClaimSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */; };
+		3BFCB70093CDC6323C4CDC56A8309182 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6742F000F8BD701CFB84B135361AE /* Claims.swift */; };
+		43CB9FBF4F563866570B3AADCC6E6949 /* ClaimSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF391F09FE5244F215D4167FBFBBFE /* ClaimSet.swift */; };
 		4586BE1CAECB76E98ED8E4AC0D6D9A26 /* Pods-fauxshop-mobileTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C950C77C8F6A54DD63A2CB96D2486D /* Pods-fauxshop-mobileTests-dummy.m */; };
-		5225B5598072D741D8303EB9D122925E /* JSONWebToken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */; };
-		5F7B8955B7CFB46DCF40C334C1FA868D /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637FD46B5360726794B76040A3AC3E6 /* Encode.swift */; };
+		5225B5598072D741D8303EB9D122925E /* JSONWebToken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3674BCE270A214C0A9FF5397BA852D6C /* JSONWebToken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E7C6D2C112A27F9CA960B72338143 /* JOSEHeader.swift */; };
+		5F7B8955B7CFB46DCF40C334C1FA868D /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C88DB0311D397DE2DBF7D1E2DF8F50E /* Encode.swift */; };
+		63E3E54D78ECF2A2C25FB5F202B96D40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7C0F17488B3552EAAFC074CFC4491DD5 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF886A20A7C3E96CB1D6E891225858B7 /* TegKeychainConstants.swift */; };
 		84CDE42B07E63B499370B8E7F517445F /* Pods-fauxshop-mobileUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 090232ECDA524DAA68F8DF06C6555E4D /* Pods-fauxshop-mobileUITests-dummy.m */; };
-		915E63DE600F3D3D6BF72EE10C868CFB /* Pods-fauxshop-mobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A1D98F0935346C3A539A98D2AD03E3 /* Pods-fauxshop-mobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9673E6DC1978A3570F513DFB20F5D33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9D738A06230ED68D87E31FD99FB674CA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19576547D82E31266340D7D283E791B1 /* Base64.swift */; };
+		9D738A06230ED68D87E31FD99FB674CA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9D7CF028722FA77D2AD5128BD4568 /* Base64.swift */; };
 		9F5C78640B2190FD6C5CEC828006E654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D0B53AA37B1EE954A77BA23919F78E /* JSONWebToken-dummy.m */; };
-		B5F5B5C06333376202D27E88D7D5BF09 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */; };
+		AD0E8D5F58B0B824D2631BDA9D541DFE /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D662654251E375E439B01BA72FA5E7A5 /* KeychainSwift-dummy.m */; };
+		B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A6925A34104C2DAEB61DABF286EF4D /* JSONWebToken-dummy.m */; };
+		B5F5B5C06333376202D27E88D7D5BF09 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA84D773C4D0FE5A482358EFFFED85 /* Decode.swift */; };
 		C9C2ADCDEDFB594C2AD2071B001381B1 /* Pods-fauxshop-mobileTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3B4D02E4F4BF71B2C422CE8A384DBB /* Pods-fauxshop-mobileTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D86844F60046B5C66BF80E3105FE2930 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */; };
+		CCBE57237E9F0DBAAF02A5575244F3BE /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC1E7452FCB49C621302EBC0A83DC1 /* KeychainSwift.swift */; };
+		D86844F60046B5C66BF80E3105FE2930 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B60C8F206EC8B5344A7D3D990970A /* HMAC.swift */; };
+		EBA8B955A11296BD7AA307752FE82ED4 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37568F69159D644E406EC5997705EFF1 /* KeychainSwiftAccessOptions.swift */; };
+		F28E0795AC7E200E0CE0DA69EBC7AFC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F6CDD739C9F2765549D42B0B5ED2F88C /* Pods-fauxshop-mobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A1D98F0935346C3A539A98D2AD03E3 /* Pods-fauxshop-mobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF0444EFE7464D56EA247A4304C8F131 /* Pods-fauxshop-mobileUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10808E7E88B7A28B682A2733DD3F2863 /* Pods-fauxshop-mobileUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A9C97E6E5AF751C620611BC19963722 /* PBXContainerItemProxy */ = {
+		A4811753F639046FC38CBE165C1AD517 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 04ACCD651C30E7B6FE864F0FFE983BA5;
 			remoteInfo = JSONWebToken;
 		};
+		FE579CBF785D4A5BCA38EF0D75D6C7E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38ACA430605AFB4229712A18BDDF5086;
+			remoteInfo = KeychainSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04984E9208DF0987C79D9A4DE2D40B4A /* Pods_fauxshop_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_fauxshop_mobile.framework; path = "Pods-fauxshop-mobile.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070043E2401ED776AA8D533387D7F4C8 /* JSONWebToken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONWebToken.xcconfig; sourceTree = "<group>"; };
+		075B60C8F206EC8B5344A7D3D990970A /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
 		0762A81820F8F489E5DFE5F4246DBF5B /* Pods-fauxshop-mobileTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fauxshop-mobileTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		090232ECDA524DAA68F8DF06C6555E4D /* Pods-fauxshop-mobileUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-fauxshop-mobileUITests-dummy.m"; sourceTree = "<group>"; };
-		104B4D2797AC98B7DE6C58D8F925E114 /* Pods_fauxshop_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_fauxshop_mobile.framework; path = "Pods-fauxshop-mobile.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4E48FD4ADB1DD03E75DEDCD471AB59 /* Pods_fauxshop_mobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_fauxshop_mobileTests.framework; path = "Pods-fauxshop-mobileTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10808E7E88B7A28B682A2733DD3F2863 /* Pods-fauxshop-mobileUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-fauxshop-mobileUITests-umbrella.h"; sourceTree = "<group>"; };
-		14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOSEHeader.swift; path = Sources/JOSEHeader.swift; sourceTree = "<group>"; };
+		10A6925A34104C2DAEB61DABF286EF4D /* JSONWebToken-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONWebToken-dummy.m"; sourceTree = "<group>"; };
+		13CC1E7452FCB49C621302EBC0A83DC1 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
+		15D9D7CF028722FA77D2AD5128BD4568 /* Base64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64.swift; path = Sources/Base64.swift; sourceTree = "<group>"; };
+		16877BAB918BF08B5026309C944FDD1A /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JWT.framework; path = JSONWebToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C2C91A51CF61FC3A64975B9D2CFAF1 /* Pods-fauxshop-mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fauxshop-mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		19576547D82E31266340D7D283E791B1 /* Base64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64.swift; path = Sources/Base64.swift; sourceTree = "<group>"; };
 		195F27614B012D881F513709784860F9 /* Pods-fauxshop-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fauxshop-mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		1C3B4D02E4F4BF71B2C422CE8A384DBB /* Pods-fauxshop-mobileTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-fauxshop-mobileTests-umbrella.h"; sourceTree = "<group>"; };
-		216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Sources/JWT.swift; sourceTree = "<group>"; };
-		230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONWebToken.xcconfig; sourceTree = "<group>"; };
 		2533EFD921A4569CB60958D31AD996C3 /* Pods-fauxshop-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fauxshop-mobile.release.xcconfig"; sourceTree = "<group>"; };
 		26388F87A2E8BE2C0B08AF97CBC03D7C /* Pods-fauxshop-mobileUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fauxshop-mobileUITests-resources.sh"; sourceTree = "<group>"; };
 		3322361D82FAC88947379D1C6FA7FC72 /* Pods-fauxshop-mobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fauxshop-mobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3674BCE270A214C0A9FF5397BA852D6C /* JSONWebToken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-umbrella.h"; sourceTree = "<group>"; };
+		37568F69159D644E406EC5997705EFF1 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		38F6DC33B8571656E66EFEA54E2C4BDF /* Pods-fauxshop-mobileUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-fauxshop-mobileUITests.modulemap"; sourceTree = "<group>"; };
+		3A8AE4BF7FF6A15FDF2E9A0CD9BA493D /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Sources/JWT.swift; sourceTree = "<group>"; };
 		3BDA34101F1B1EBA96D4E17A24BD95F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE15F20B71DEAEC84365CDE123332A9 /* Pods-fauxshop-mobileUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fauxshop-mobileUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4101B1B8EF5E5CD93A52FD48118A8BE3 /* Pods-fauxshop-mobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-fauxshop-mobile-acknowledgements.markdown"; sourceTree = "<group>"; };
 		42D81A9DF90A4B19786D34DDC00DFB45 /* Pods-fauxshop-mobile-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fauxshop-mobile-frameworks.sh"; sourceTree = "<group>"; };
+		52788DC8CCBFDA09EBCCA1246AE5BBF0 /* JSONWebToken.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JSONWebToken.modulemap; sourceTree = "<group>"; };
 		5614FABBD7A394C34A81F9EF039E153F /* Pods-fauxshop-mobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-fauxshop-mobile.modulemap"; sourceTree = "<group>"; };
-		5637FD46B5360726794B76040A3AC3E6 /* Encode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encode.swift; path = Sources/Encode.swift; sourceTree = "<group>"; };
-		5FA762B986F679975C91CE3EFA207844 /* JSONWebToken-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-prefix.pch"; sourceTree = "<group>"; };
 		6417A2FE38953A353158F95CB2B652DC /* Pods-fauxshop-mobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-fauxshop-mobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69983D395A67EE43AE9DBE5B93A769C1 /* Pods-fauxshop-mobileUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fauxshop-mobileUITests-frameworks.sh"; sourceTree = "<group>"; };
-		6AEE973A57BD76E43AE79AE8845E3AEF /* JSONWebToken.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JSONWebToken.modulemap; sourceTree = "<group>"; };
 		6B05BD9C629CEECADB2C6D0F48F0155D /* Pods-fauxshop-mobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fauxshop-mobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70D82E6374E290EEF7B6CAF9827F7E8A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E5AE11FD7DDFDBC1C278D8093D65B0 /* Pods-fauxshop-mobile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-fauxshop-mobile-dummy.m"; sourceTree = "<group>"; };
-		738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
 		770BE2F7F0377BFC715A43EB578C0E6A /* Pods-fauxshop-mobileTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-fauxshop-mobileTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7AAB28F6BE8C4A27593B110752990526 /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
 		7CDDF1F267100D1884685B8A7B6C6ADD /* Pods-fauxshop-mobileTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fauxshop-mobileTests-resources.sh"; sourceTree = "<group>"; };
 		86300C670047155EA0804153F291708F /* Pods-fauxshop-mobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fauxshop-mobile-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACCommonCrypto.swift; path = Sources/HMACCommonCrypto.swift; sourceTree = "<group>"; };
+		898BC2F8AF94E4EDCA384DE2550D8B12 /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
 		91383FA86BE3FA3B95623310B035F8C4 /* Pods-fauxshop-mobile-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fauxshop-mobile-resources.sh"; sourceTree = "<group>"; };
+		91A2BDD4371CFD6F998B4631FF29CA18 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
+		92DA84D773C4D0FE5A482358EFFFED85 /* Decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decode.swift; path = Sources/Decode.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decode.swift; path = Sources/Decode.swift; sourceTree = "<group>"; };
+		944CDC854A5B5A53EE2E3F13F713D44C /* HMACCommonCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACCommonCrypto.swift; path = Sources/HMACCommonCrypto.swift; sourceTree = "<group>"; };
+		98E6742F000F8BD701CFB84B135361AE /* Claims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Claims.swift; path = Sources/Claims.swift; sourceTree = "<group>"; };
+		98F37FD1F6A8B3E19D779393C5D17574 /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
+		9B3981D6D1CF12DE0EE50B10281C6395 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C88DB0311D397DE2DBF7D1E2DF8F50E /* Encode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encode.swift; path = Sources/Encode.swift; sourceTree = "<group>"; };
 		A8F54761C81C1BE944AAFB968AE7BC9C /* Pods-fauxshop-mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fauxshop-mobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		B6FBE66FF80DBD5E8A1C32A33B28048C /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JWT.framework; path = JSONWebToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFF391F09FE5244F215D4167FBFBBFE /* ClaimSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimSet.swift; path = Sources/ClaimSet.swift; sourceTree = "<group>"; };
 		B70BD6F629D28D0B5DA74949283C0250 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7B02D1B742FFA68F0A7D8AE3119839D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8C950C77C8F6A54DD63A2CB96D2486D /* Pods-fauxshop-mobileTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-fauxshop-mobileTests-dummy.m"; sourceTree = "<group>"; };
+		B99CA140FA7A2C1DF2CE02E86CF61B56 /* JSONWebToken-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-prefix.pch"; sourceTree = "<group>"; };
 		BF5C92F6448641AF2B035B7D68A47CC9 /* Pods-fauxshop-mobileTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-fauxshop-mobileTests.modulemap"; sourceTree = "<group>"; };
-		C0D7628E747C99A30A2F9ECFCA0EA5AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4F0C056DE246039049C1724A680F0E0 /* Pods-fauxshop-mobileTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fauxshop-mobileTests-frameworks.sh"; sourceTree = "<group>"; };
-		C5C0C7DBD85D9C446CF41B5A4C2EF362 /* Claims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Claims.swift; path = Sources/Claims.swift; sourceTree = "<group>"; };
-		C7D0B53AA37B1EE954A77BA23919F78E /* JSONWebToken-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONWebToken-dummy.m"; sourceTree = "<group>"; };
-		C990AABB82E2EFC3BB36F8428CB4F41C /* Pods_fauxshop_mobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_fauxshop_mobileUITests.framework; path = "Pods-fauxshop-mobileUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimSet.swift; path = Sources/ClaimSet.swift; sourceTree = "<group>"; };
-		DAF91C567C59EA5D0FA0A21C470716A3 /* Pods_fauxshop_mobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_fauxshop_mobileTests.framework; path = "Pods-fauxshop-mobileTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-umbrella.h"; sourceTree = "<group>"; };
+		D662654251E375E439B01BA72FA5E7A5 /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
+		DA3F5811D721FD82FBD259A97F92EB04 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift.framework; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF886A20A7C3E96CB1D6E891225858B7 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
 		E6A1D98F0935346C3A539A98D2AD03E3 /* Pods-fauxshop-mobile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-fauxshop-mobile-umbrella.h"; sourceTree = "<group>"; };
+		F66A56EBC1ED4E36562D089E688FC217 /* Pods_fauxshop_mobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_fauxshop_mobileUITests.framework; path = "Pods-fauxshop-mobileUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81E7C6D2C112A27F9CA960B72338143 /* JOSEHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOSEHeader.swift; path = Sources/JOSEHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6138EF1CA01E32DBAE03AF478F5D8461 /* Frameworks */ = {
+		0481C77970293B0857D5702180A8E800 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38EFD4DAE44BA23B4D9C9039F8904D94 /* Foundation.framework in Frameworks */,
+				F28E0795AC7E200E0CE0DA69EBC7AFC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4644C6D96A73768B60CF66E22FD3B879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E3E54D78ECF2A2C25FB5F202B96D40 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +179,24 @@
 			path = "Target Support Files/Pods-fauxshop-mobile";
 			sourceTree = "<group>";
 		};
+		07484E02BCF20AAAA5521744745499B0 /* JSONWebToken */ = {
+			isa = PBXGroup;
+			children = (
+				15D9D7CF028722FA77D2AD5128BD4568 /* Base64.swift */,
+				98E6742F000F8BD701CFB84B135361AE /* Claims.swift */,
+				AAFF391F09FE5244F215D4167FBFBBFE /* ClaimSet.swift */,
+				92DA84D773C4D0FE5A482358EFFFED85 /* Decode.swift */,
+				9C88DB0311D397DE2DBF7D1E2DF8F50E /* Encode.swift */,
+				075B60C8F206EC8B5344A7D3D990970A /* HMAC.swift */,
+				944CDC854A5B5A53EE2E3F13F713D44C /* HMACCommonCrypto.swift */,
+				F81E7C6D2C112A27F9CA960B72338143 /* JOSEHeader.swift */,
+				3A8AE4BF7FF6A15FDF2E9A0CD9BA493D /* JWT.swift */,
+				8610FB14E19F9A893D8905B8B7A4AE1B /* Support Files */,
+			);
+			name = JSONWebToken;
+			path = JSONWebToken;
+			sourceTree = "<group>";
+		};
 		188E6BA26D38300695CB93DE3B869ED6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +205,18 @@
 				3CDAF04E91A8B2955A924FB068A1331F /* Pods-fauxshop-mobileUITests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		379DF714FF38EA16E473A505D1F1551D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16877BAB918BF08B5026309C944FDD1A /* JWT.framework */,
+				DA3F5811D721FD82FBD259A97F92EB04 /* KeychainSwift.framework */,
+				04984E9208DF0987C79D9A4DE2D40B4A /* Pods_fauxshop_mobile.framework */,
+				0E4E48FD4ADB1DD03E75DEDCD471AB59 /* Pods_fauxshop_mobileTests.framework */,
+				F66A56EBC1ED4E36562D089E688FC217 /* Pods_fauxshop_mobileUITests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3CDAF04E91A8B2955A924FB068A1331F /* Pods-fauxshop-mobileUITests */ = {
@@ -176,15 +237,16 @@
 			path = "Target Support Files/Pods-fauxshop-mobileUITests";
 			sourceTree = "<group>";
 		};
-		4C4716BBFD30D6DB028505FA54F8B70F /* Products */ = {
+		6E830B65E55DB095A08873DDC3964CCF /* KeychainSwift */ = {
 			isa = PBXGroup;
 			children = (
-				B6FBE66FF80DBD5E8A1C32A33B28048C /* JWT.framework */,
-				104B4D2797AC98B7DE6C58D8F925E114 /* Pods_fauxshop_mobile.framework */,
-				DAF91C567C59EA5D0FA0A21C470716A3 /* Pods_fauxshop_mobileTests.framework */,
-				C990AABB82E2EFC3BB36F8428CB4F41C /* Pods_fauxshop_mobileUITests.framework */,
+				13CC1E7452FCB49C621302EBC0A83DC1 /* KeychainSwift.swift */,
+				37568F69159D644E406EC5997705EFF1 /* KeychainSwiftAccessOptions.swift */,
+				DF886A20A7C3E96CB1D6E891225858B7 /* TegKeychainConstants.swift */,
+				CD480C0A5B069CE1489A89BA00801999 /* Support Files */,
 			);
-			name = Products;
+			name = KeychainSwift;
+			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -192,47 +254,21 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7E8C0D7D9A6898486693446D51658098 /* Pods */,
-				4C4716BBFD30D6DB028505FA54F8B70F /* Products */,
+				E8B6F97D6D73651AE26E11631003606E /* Pods */,
+				379DF714FF38EA16E473A505D1F1551D /* Products */,
 				188E6BA26D38300695CB93DE3B869ED6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E8C0D7D9A6898486693446D51658098 /* Pods */ = {
+		8610FB14E19F9A893D8905B8B7A4AE1B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8065E4CE863BBF79A8A99A0975BF952F /* JSONWebToken */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8065E4CE863BBF79A8A99A0975BF952F /* JSONWebToken */ = {
-			isa = PBXGroup;
-			children = (
-				19576547D82E31266340D7D283E791B1 /* Base64.swift */,
-				C5C0C7DBD85D9C446CF41B5A4C2EF362 /* Claims.swift */,
-				D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */,
-				A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */,
-				5637FD46B5360726794B76040A3AC3E6 /* Encode.swift */,
-				738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */,
-				8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */,
-				14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */,
-				216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */,
-				B7E87098414A057C1608F198B12B6A23 /* Support Files */,
-			);
-			name = JSONWebToken;
-			path = JSONWebToken;
-			sourceTree = "<group>";
-		};
-		B7E87098414A057C1608F198B12B6A23 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C0D7628E747C99A30A2F9ECFCA0EA5AC /* Info.plist */,
-				6AEE973A57BD76E43AE79AE8845E3AEF /* JSONWebToken.modulemap */,
-				230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */,
-				C7D0B53AA37B1EE954A77BA23919F78E /* JSONWebToken-dummy.m */,
-				5FA762B986F679975C91CE3EFA207844 /* JSONWebToken-prefix.pch */,
-				E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */,
+				B7B02D1B742FFA68F0A7D8AE3119839D /* Info.plist */,
+				52788DC8CCBFDA09EBCCA1246AE5BBF0 /* JSONWebToken.modulemap */,
+				070043E2401ED776AA8D533387D7F4C8 /* JSONWebToken.xcconfig */,
+				10A6925A34104C2DAEB61DABF286EF4D /* JSONWebToken-dummy.m */,
+				B99CA140FA7A2C1DF2CE02E86CF61B56 /* JSONWebToken-prefix.pch */,
+				3674BCE270A214C0A9FF5397BA852D6C /* JSONWebToken-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/JSONWebToken";
@@ -244,6 +280,20 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD480C0A5B069CE1489A89BA00801999 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B3981D6D1CF12DE0EE50B10281C6395 /* Info.plist */,
+				98F37FD1F6A8B3E19D779393C5D17574 /* KeychainSwift.modulemap */,
+				7AAB28F6BE8C4A27593B110752990526 /* KeychainSwift.xcconfig */,
+				D662654251E375E439B01BA72FA5E7A5 /* KeychainSwift-dummy.m */,
+				898BC2F8AF94E4EDCA384DE2550D8B12 /* KeychainSwift-prefix.pch */,
+				91A2BDD4371CFD6F998B4631FF29CA18 /* KeychainSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeychainSwift";
 			sourceTree = "<group>";
 		};
 		CE6E9BE14351EE7A1C60AC12F8C679E8 /* Pods-fauxshop-mobileTests */ = {
@@ -272,17 +322,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		E8B6F97D6D73651AE26E11631003606E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07484E02BCF20AAAA5521744745499B0 /* JSONWebToken */,
+				6E830B65E55DB095A08873DDC3964CCF /* KeychainSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		35C1E3A47392634D94F1949000363297 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				915E63DE600F3D3D6BF72EE10C868CFB /* Pods-fauxshop-mobile-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5662E7A69936DF2A28681DC3713CC247 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,11 +342,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		709ED9DABF9F755DE6669963CABE9DCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CDD739C9F2765549D42B0B5ED2F88C /* Pods-fauxshop-mobile-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96CC22D0140CA1385ADAE51D35EA5CDE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FF0444EFE7464D56EA247A4304C8F131 /* Pods-fauxshop-mobileUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCCA8DB9A9A2B78257AAEB7F44C85C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08AA89D020B5C4FD74D1529A3E972AB9 /* KeychainSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,25 +391,24 @@
 			);
 			name = JSONWebToken;
 			productName = JSONWebToken;
-			productReference = B6FBE66FF80DBD5E8A1C32A33B28048C /* JWT.framework */;
+			productReference = 16877BAB918BF08B5026309C944FDD1A /* JWT.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4441957982018105A0B3EFA4DDCCF714 /* Pods-fauxshop-mobile */ = {
+		38ACA430605AFB4229712A18BDDF5086 /* KeychainSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C4D3267479D66EC8C54D4E9231E7989 /* Build configuration list for PBXNativeTarget "Pods-fauxshop-mobile" */;
+			buildConfigurationList = 16C5D5A8E6CDB4211B0732F819F55A47 /* Build configuration list for PBXNativeTarget "KeychainSwift" */;
 			buildPhases = (
-				0D3DCBE58A9A3037DFAEA20E45D3EA52 /* Sources */,
-				6138EF1CA01E32DBAE03AF478F5D8461 /* Frameworks */,
-				35C1E3A47392634D94F1949000363297 /* Headers */,
+				BA64D531146693E66BF1C1CEE1D81BC5 /* Sources */,
+				4644C6D96A73768B60CF66E22FD3B879 /* Frameworks */,
+				FDCCA8DB9A9A2B78257AAEB7F44C85C3 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9879A27BED42EE6BEBDD4BB2521FE742 /* PBXTargetDependency */,
 			);
-			name = "Pods-fauxshop-mobile";
-			productName = "Pods-fauxshop-mobile";
-			productReference = 104B4D2797AC98B7DE6C58D8F925E114 /* Pods_fauxshop_mobile.framework */;
+			name = KeychainSwift;
+			productName = KeychainSwift;
+			productReference = DA3F5811D721FD82FBD259A97F92EB04 /* KeychainSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		53AB16ECF08CA65CB5C69E691BAD4041 /* Pods-fauxshop-mobileTests */ = {
@@ -359,7 +425,7 @@
 			);
 			name = "Pods-fauxshop-mobileTests";
 			productName = "Pods-fauxshop-mobileTests";
-			productReference = DAF91C567C59EA5D0FA0A21C470716A3 /* Pods_fauxshop_mobileTests.framework */;
+			productReference = 0E4E48FD4ADB1DD03E75DEDCD471AB59 /* Pods_fauxshop_mobileTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8142C54B13DC13E4979F45DE666CF4B2 /* Pods-fauxshop-mobileUITests */ = {
@@ -376,7 +442,26 @@
 			);
 			name = "Pods-fauxshop-mobileUITests";
 			productName = "Pods-fauxshop-mobileUITests";
-			productReference = C990AABB82E2EFC3BB36F8428CB4F41C /* Pods_fauxshop_mobileUITests.framework */;
+			productReference = F66A56EBC1ED4E36562D089E688FC217 /* Pods_fauxshop_mobileUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA670475BE9CC8E69441E141DDCE56CA /* Pods-fauxshop-mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33316364B5865655D52EDC3869E296E7 /* Build configuration list for PBXNativeTarget "Pods-fauxshop-mobile" */;
+			buildPhases = (
+				00A183D159B805419C4A6C19007652AC /* Sources */,
+				0481C77970293B0857D5702180A8E800 /* Frameworks */,
+				709ED9DABF9F755DE6669963CABE9DCC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFE61E68F11A2EA736AC543DC54AB5C7 /* PBXTargetDependency */,
+				126D2098A6D22796BEFFCD7A2A3DFE4F /* PBXTargetDependency */,
+			);
+			name = "Pods-fauxshop-mobile";
+			productName = "Pods-fauxshop-mobile";
+			productReference = 04984E9208DF0987C79D9A4DE2D40B4A /* Pods_fauxshop_mobile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -396,12 +481,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4C4716BBFD30D6DB028505FA54F8B70F /* Products */;
+			productRefGroup = 379DF714FF38EA16E473A505D1F1551D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */,
-				4441957982018105A0B3EFA4DDCCF714 /* Pods-fauxshop-mobile */,
+				38ACA430605AFB4229712A18BDDF5086 /* KeychainSwift */,
+				BA670475BE9CC8E69441E141DDCE56CA /* Pods-fauxshop-mobile */,
 				53AB16ECF08CA65CB5C69E691BAD4041 /* Pods-fauxshop-mobileTests */,
 				8142C54B13DC13E4979F45DE666CF4B2 /* Pods-fauxshop-mobileUITests */,
 			);
@@ -409,11 +495,11 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0D3DCBE58A9A3037DFAEA20E45D3EA52 /* Sources */ = {
+		00A183D159B805419C4A6C19007652AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28DBA47B07C65D0731DB8D540D81BB9A /* Pods-fauxshop-mobile-dummy.m in Sources */,
+				1143D0083D7E5149D70736258DC762A0 /* Pods-fauxshop-mobile-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +517,17 @@
 				5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */,
 				B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */,
 				1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA64D531146693E66BF1C1CEE1D81BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0E8D5F58B0B824D2631BDA9D541DFE /* KeychainSwift-dummy.m in Sources */,
+				CCBE57237E9F0DBAAF02A5575244F3BE /* KeychainSwift.swift in Sources */,
+				EBA8B955A11296BD7AA307752FE82ED4 /* KeychainSwiftAccessOptions.swift in Sources */,
+				7C0F17488B3552EAAFC074CFC4491DD5 /* TegKeychainConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,16 +550,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9879A27BED42EE6BEBDD4BB2521FE742 /* PBXTargetDependency */ = {
+		126D2098A6D22796BEFFCD7A2A3DFE4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainSwift;
+			target = 38ACA430605AFB4229712A18BDDF5086 /* KeychainSwift */;
+			targetProxy = FE579CBF785D4A5BCA38EF0D75D6C7E8 /* PBXContainerItemProxy */;
+		};
+		EFE61E68F11A2EA736AC543DC54AB5C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONWebToken;
 			target = 04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */;
-			targetProxy = 5A9C97E6E5AF751C620611BC19963722 /* PBXContainerItemProxy */;
+			targetProxy = A4811753F639046FC38CBE165C1AD517 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0968CBCF3C0B96273F2B8B392D9D1DA3 /* Release */ = {
+		1725E08D8F1310BAD633464B505DF7D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2533EFD921A4569CB60958D31AD996C3 /* Pods-fauxshop-mobile.release.xcconfig */;
 			buildSettings = {
@@ -489,6 +592,69 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1BF162ECB23784C0E7C5C62CA7011FF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AAB28F6BE8C4A27593B110752990526 /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2511EE2FF6B2A27D44E80BFB5C439F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AAB28F6BE8C4A27593B110752990526 /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -589,7 +755,7 @@
 		};
 		748170F03F598CFDB3EC688795B9BE2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */;
+			baseConfigurationReference = 070043E2401ED776AA8D533387D7F4C8 /* JSONWebToken.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -652,43 +818,9 @@
 			};
 			name = Release;
 		};
-		A7AA7048BF5DF6D6A98AABDBA2D0C29F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 195F27614B012D881F513709784860F9 /* Pods-fauxshop-mobile.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-fauxshop-mobile/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-fauxshop-mobile/Pods-fauxshop-mobile.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_fauxshop_mobile;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		CFF13A118452B8A4D158DFC6392F39C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */;
+			baseConfigurationReference = 070043E2401ED776AA8D533387D7F4C8 /* JSONWebToken.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -844,9 +976,52 @@
 			};
 			name = Debug;
 		};
+		FBA8EE0BB7AF31E9DCB5ACD461CC599E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195F27614B012D881F513709784860F9 /* Pods-fauxshop-mobile.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-fauxshop-mobile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-fauxshop-mobile/Pods-fauxshop-mobile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_fauxshop_mobile;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		16C5D5A8E6CDB4211B0732F819F55A47 /* Build configuration list for PBXNativeTarget "KeychainSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BF162ECB23784C0E7C5C62CA7011FF2 /* Debug */,
+				2511EE2FF6B2A27D44E80BFB5C439F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -865,20 +1040,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		33316364B5865655D52EDC3869E296E7 /* Build configuration list for PBXNativeTarget "Pods-fauxshop-mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBA8EE0BB7AF31E9DCB5ACD461CC599E /* Debug */,
+				1725E08D8F1310BAD633464B505DF7D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3FC3B867D496E7A66CBBDB591308AFCB /* Build configuration list for PBXNativeTarget "Pods-fauxshop-mobileUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC1D441AEB9C3158959EC312C8F6D487 /* Debug */,
 				396B65DAFFC8624874A81CAC0E85313E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C4D3267479D66EC8C54D4E9231E7989 /* Build configuration list for PBXNativeTarget "Pods-fauxshop-mobile" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7AA7048BF5DF6D6A98AABDBA2D0C29F /* Debug */,
-				0968CBCF3C0B96273F2B8B392D9D1DA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

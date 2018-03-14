@@ -7,6 +7,7 @@ target 'fauxshop-mobile' do
 
   # Pods for fauxshop-mobile
   pod 'JSONWebToken'
+  pod 'KeychainSwift', '~> 10.0'
 
   target 'fauxshop-mobileTests' do
     inherit! :search_paths
