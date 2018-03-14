@@ -44,6 +44,29 @@ class CartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func retrieveCart() {
+        let url = URL(string: "http://localhost:8080/api/products")
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            
+            if error != nil {
+                print(error ?? "Error encountered printing the error")
+                return
+            }
+            
+            do {
+                self.products = try JSONDecoder().decode([Products].self, from: data!)
+            } catch {
+                print(error)
+            }
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            
+            }.resume()
+        
+    }
+    
 
     /*
     // MARK: - Navigation
