@@ -62,8 +62,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ui-7p-D6Z">
-                                                            <rect key="frame" x="47" y="11" width="42" height="22"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="itemName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ui-7p-D6Z">
+                                                            <rect key="frame" x="47" y="11" width="154" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -98,6 +98,7 @@
                         <outlet property="CartEmpty" destination="EaX-j2-gy0" id="8xj-Jy-VuC"/>
                         <outlet property="CartPopulated" destination="1mW-v3-e65" id="rr0-fe-ctv"/>
                         <outlet property="CartTable" destination="JKZ-rq-zKm" id="OnH-eH-7eW"/>
+                        <outlet property="cartTableView" destination="JKZ-rq-zKm" id="dGG-Kc-mcD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiW-qm-V54" userLabel="First Responder" sceneMemberID="firstResponder"/>

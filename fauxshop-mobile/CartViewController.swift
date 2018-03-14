@@ -15,28 +15,31 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var CartPopulated: CartPopulatedView!
     @IBOutlet weak var CartTable: UITableView!
     
+    @IBOutlet weak var cartTableView: UITableView!
+    
     let keychain = KeychainSwift()
     var cart = [Cart]()
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return cart.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartTableCell", for: indexPath) as! CustomCartTableViewCell
-        cell.itemName.text = "test"
-        cell.itemImage.image = #imageLiteral(resourceName: "vase_2a")
+        cell.itemName.text = cart[indexPath.row].productsName
+        cell.itemImage.image = UIImage(named: cart[indexPath.row].productsImage)
         return cell
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        cartTableView.dataSource = self
+        
         CartEmpty.isHidden = true;
         CartPopulated.isHidden = true;
         
-        CartTable.accessibilityLabel = "cartTable"
-        CartTable.isAccessibilityElement = true
+        retrieveCart()
 
         let isUserLoggedIn = (keychain.get("authenticationToken") != nil)
         if (!isUserLoggedIn){
@@ -61,6 +64,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func retrieveCart() {
+        print("in retrieveCart()")
         let id = keychain.get("id")!
         let url = URL(string: "http://localhost:8080/api/cart/\(id)")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -68,12 +72,17 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print(error ?? "Error encountered printing the error")
                 return
             }
-            
             do {
                 self.cart = try JSONDecoder().decode([Cart].self, from: data!)
+                print(self.cart)
             } catch {
                 print(error)
             }
+            
+            DispatchQueue.main.async {
+                self.cartTableView.reloadData()
+            }
+            
         }.resume()
     }
     
