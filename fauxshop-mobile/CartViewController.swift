@@ -9,18 +9,33 @@
 import UIKit
 import KeychainSwift
 
-class CartViewController: UIViewController {
-
+class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var CartEmpty: UIView!
-    @IBOutlet weak var CartPopulated: UIView!
+    @IBOutlet weak var CartPopulated: CartPopulatedView!
+    @IBOutlet weak var CartTable: UITableView!
     
     let keychain = KeychainSwift()
+    var cart = [Cart]()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cartTable", for: indexPath)
+        cell.textLabel?.text = "test"
+        return cell
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         CartEmpty.isHidden = true;
         CartPopulated.isHidden = true;
+        
+        CartTable.accessibilityLabel = "cartTable"
+        CartTable.isAccessibilityElement = true
 
         let isUserLoggedIn = (keychain.get("authenticationToken") != nil)
         if (!isUserLoggedIn){
@@ -45,26 +60,20 @@ class CartViewController: UIViewController {
     }
     
     func retrieveCart() {
-        let url = URL(string: "http://localhost:8080/api/products")
+        let id = keychain.get("id")!
+        let url = URL(string: "http://localhost:8080/api/cart/\(id)")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
             if error != nil {
                 print(error ?? "Error encountered printing the error")
                 return
             }
             
             do {
-                self.products = try JSONDecoder().decode([Products].self, from: data!)
+                self.cart = try JSONDecoder().decode([Cart].self, from: data!)
             } catch {
                 print(error)
             }
-            
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
-            }.resume()
-        
+        }.resume()
     }
     
 
