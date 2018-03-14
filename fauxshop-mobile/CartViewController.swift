@@ -17,14 +17,15 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let keychain = KeychainSwift()
     var cart = [Cart]()
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cartTable", for: indexPath)
-        cell.textLabel?.text = "test"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cartTableCell", for: indexPath) as! CustomCartTableViewCell
+        cell.itemName.text = "test"
+        cell.itemImage.image = #imageLiteral(resourceName: "vase_2a")
         return cell
     }
     
