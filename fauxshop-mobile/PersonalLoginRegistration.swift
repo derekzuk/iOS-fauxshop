@@ -21,9 +21,8 @@ class PersonalLoginRegistration: UIViewController {
     
     // Personal View
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
-        UserDefaults.standard.removeObject(forKey: "authenticationToken")
-        UserDefaults.standard.synchronize()
+        keychain.delete("isUserLoggedIn")
+        keychain.delete("authenticationToken")
         
         displayLoginView()
     }
@@ -73,12 +72,11 @@ class PersonalLoginRegistration: UIViewController {
                             
                             // Set the user data to be used in other API calls
                             self.setUser(login:login as! String, userPassword:userPassword)
-
-                            UserDefaults.standard.set(hash!, forKey:"authenticationToken")
-                            UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
-                            UserDefaults.standard.set(login!, forKey:"login")
-                            UserDefaults.standard.set(auth!, forKey:"auth")
-                            UserDefaults.standard.synchronize()
+                            
+                            self.keychain.set(hash!, forKey: "authenticationToken")
+                            self.keychain.set(true, forKey: "isUserLoggedIn")
+                            self.keychain.set(String(describing: login!), forKey: "login")
+                            self.keychain.set(String(describing: auth!), forKey: "auth")
                             
                             // Navigate to Personal View after login is successful
                             DispatchQueue.main.async() { () -> Void in
@@ -157,9 +155,8 @@ class PersonalLoginRegistration: UIViewController {
         }
         
         // Store data
-        UserDefaults.standard.set(userEmail,forKey:"userEmail")
-        UserDefaults.standard.set(userPassword,forKey:"userPassword")
-        UserDefaults.standard.synchronize()
+        keychain.set(userEmail, forKey: "userEmail")
+        keychain.set(userPassword, forKey: "userPassword")
         
         // Display alert message with confirmation
         let myAlert = UIAlertController(title:"Success", message:"Registration is successful", preferredStyle: UIAlertControllerStyle.alert)
@@ -207,7 +204,7 @@ class PersonalLoginRegistration: UIViewController {
         
         hideAllViews()
         
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        let isUserLoggedIn = (keychain.get("authenticationToken") != nil)
         if (isUserLoggedIn){
             displayPersonalView()
         } else {

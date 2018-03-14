@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class FavoritesViewController: UIViewController {
 
     @IBOutlet weak var FavoritesPopulatedView: UIView!
     @IBOutlet weak var FavoritesNoneView: UIView!
     @IBOutlet weak var FavoritesNotLoggedInView: UIView!
+    
+    let keychain = KeychainSwift()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +25,7 @@ class FavoritesViewController: UIViewController {
         FavoritesNoneView.isHidden = true
         FavoritesNotLoggedInView.isHidden = true
         
-        let isUserLoggedIn = (UserDefaults.standard.object(forKey: "authenticationToken") != nil)        
+        let isUserLoggedIn = (keychain.get("authenticationToken") != nil)
         if (!isUserLoggedIn){
             FavoritesNotLoggedInView.isHidden = false;
             FavoritesPopulatedView.isHidden = true;
@@ -51,7 +54,8 @@ class FavoritesViewController: UIViewController {
         FavoritesNoneView.isHidden = true;
         FavoritesNotLoggedInView.isHidden = true;
         
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+        let isUserLoggedIn = (keychain.get("authenticationToken") != nil)
+        print(isUserLoggedIn)
         if (!isUserLoggedIn){
             FavoritesNotLoggedInView.isHidden = false;
             FavoritesPopulatedView.isHidden = true;

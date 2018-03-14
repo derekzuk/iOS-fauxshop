@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class CartViewController: UIViewController {
 
     @IBOutlet weak var CartEmpty: UIView!
     @IBOutlet weak var CartPopulated: UIView!
     
+    let keychain = KeychainSwift()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         CartEmpty.isHidden = true;
         CartPopulated.isHidden = true;
-        
-        let isUserLoggedIn = (UserDefaults.standard.object(forKey: "authenticationToken") != nil)
+
+        let isUserLoggedIn = (keychain.get("authenticationToken") != nil)
         if (!isUserLoggedIn){
             CartEmpty.isHidden = false;
             CartPopulated.isHidden = true;
