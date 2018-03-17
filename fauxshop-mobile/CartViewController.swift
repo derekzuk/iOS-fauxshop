@@ -21,14 +21,28 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var cart = [Cart]()
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cart.count
+        return cart.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cartTableCell", for: indexPath) as! CustomCartTableViewCell
-        cell.itemName.text = cart[indexPath.row].productsName
-        cell.itemImage.image = UIImage(named: cart[indexPath.row].productsImage)
-        return cell
+        if (indexPath.row < cart.count){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cartTableCell", for: indexPath) as! CustomCartTableViewCell
+            cell.itemName.text = cart[indexPath.row].productsName
+            cell.itemImage.image = UIImage(named: cart[indexPath.row].productsImageMobile)
+            cell.itemDescription.text = cart[indexPath.row].productsDescription
+            cell.cellPrice.text = String(cart[indexPath.row].cartItemTotalPrice)
+            return cell
+        } else {
+            // final cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cartFinalCell", for: indexPath) as! CustomCartTableViewCell
+            print("in final cell")
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 150.0;//Choose your custom row height
     }
     
     override func viewWillAppear(_ animated: Bool) {

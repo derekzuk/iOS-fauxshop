@@ -12,6 +12,8 @@ class CustomCartTableViewCell: UITableViewCell {
 
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemDescription: UITextView!
+    @IBOutlet weak var cellPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +26,12 @@ class CustomCartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func removeButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+    }
+    
+    
+    
 }
