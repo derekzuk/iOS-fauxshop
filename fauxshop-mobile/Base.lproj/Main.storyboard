@@ -106,10 +106,12 @@
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="addButton" destination="xuL-4u-2Yr" id="xsq-WH-ZJy"/>
                                                     <outlet property="cellPrice" destination="6xA-Yt-lu8" id="dEn-Zg-8l9"/>
                                                     <outlet property="itemDescription" destination="MP5-xm-gIU" id="Jr3-yB-vL8"/>
                                                     <outlet property="itemImage" destination="VNb-EM-eHw" id="eaQ-7Z-ZkA"/>
                                                     <outlet property="itemName" destination="2Ui-7p-D6Z" id="XWh-I2-nWk"/>
+                                                    <outlet property="removeButton" destination="gIG-5q-L0N" id="lYi-hS-P2I"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartFinalCell" rowHeight="187" id="Vnm-Kq-Gib" customClass="CustomCartTableViewCell" customModule="fauxshop_mobile" customModuleProvider="target">

@@ -14,8 +14,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var CartEmpty: UIView!
     @IBOutlet weak var CartPopulated: CartPopulatedView!
     @IBOutlet weak var CartTable: UITableView!
-    
-    @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var cartTableView: UITableView!    
     
     let keychain = KeychainSwift()
     var cart = [Cart]()
@@ -27,6 +26,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row < cart.count){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cartTableCell", for: indexPath) as! CustomCartTableViewCell
+            
+            // Establish functionality for add and remove buttons
+            cell.removeButton.addTarget(self, action: #selector(self.removeButtonTapped(_:)), for: .touchUpInside)
+            cell.addButton.addTarget(self, action: #selector(self.addButtonTapped(_:)), for: .touchUpInside)
+            
+            // Populate table cell data
             cell.itemName.text = cart[indexPath.row].productsName
             cell.itemImage.image = UIImage(named: cart[indexPath.row].productsImageMobile)
             cell.itemDescription.text = cart[indexPath.row].productsDescription
@@ -98,6 +103,20 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             
         }.resume()
+    }
+    
+    @objc func addButtonTapped(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: cartTableView as UIView)
+        let indexPath: IndexPath! = cartTableView.indexPathForRow(at: point)
+        
+        print("row is = \(indexPath.row)")
+    }
+    
+    @objc func removeButtonTapped(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: cartTableView as UIView)
+        let indexPath: IndexPath! = cartTableView.indexPathForRow(at: point)
+        
+        print("row is = \(indexPath.row)")
     }
     
 

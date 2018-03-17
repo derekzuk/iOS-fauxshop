@@ -14,6 +14,8 @@ class CustomCartTableViewCell: UITableViewCell {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemDescription: UITextView!
     @IBOutlet weak var cellPrice: UILabel!
+    @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
