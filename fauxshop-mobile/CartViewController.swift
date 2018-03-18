@@ -8,6 +8,7 @@
 
 import UIKit
 import KeychainSwift
+import JWT
 
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -116,10 +117,37 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let point = sender.convert(CGPoint.zero, to: cartTableView as UIView)
         let indexPath: IndexPath! = cartTableView.indexPathForRow(at: point)
         
+        let cartId = cart[indexPath.row].cartId
+        removeItemFromCart(cartId: cartId)
+        
         print("row is = \(indexPath.row)")
     }
     
-
+    func removeItemFromCart(cartId: Int) {
+        let url = URL(string: "http://localhost:8080/api/cart/\(cartId)")!
+        let headers = [ "Content-Type": "application/json" ]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse {
+                if (200 ... 299 ~= httpResponse.statusCode) {
+                    // Cart item was successfuly removed
+                    // TODO: update the cart listing
+                } else {
+                    // Fail
+                print("Error removing item from cart: \(httpResponse.statusCode)")
+                }
+            }
+        }
+        task.resume()
+    }
+    
     /*
     // MARK: - Navigation
 
