@@ -116,21 +116,20 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @objc func removeButtonTapped(_ sender: UIButton) {
         let point = sender.convert(CGPoint.zero, to: cartTableView as UIView)
         let indexPath: IndexPath! = cartTableView.indexPathForRow(at: point)
+                print("row to be removed is = \(indexPath.row)")
         
         let cartId = cart[indexPath.row].cartId
-        removeItemFromCart(cartId: cartId)
-        
-        print("row is = \(indexPath.row)")
+        removeItemFromCart(indexPath: indexPath, cartId: cartId)
     }
     
-    func removeItemFromCart(cartId: Int) {
+    func removeItemFromCart(indexPath: IndexPath, cartId: Int) {
         let url = URL(string: "http://localhost:8080/api/cart/\(cartId)")!
         let headers = [ "Content-Type": "application/json" ]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
@@ -138,14 +137,18 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let httpResponse = response as? HTTPURLResponse {
                 if (200 ... 299 ~= httpResponse.statusCode) {
                     // Cart item was successfuly removed
-                    // TODO: update the cart listing
+                    
+                    // We have to remove the item from cart before we can delete the row from cartTableVew
+                    self.cart.remove(at: indexPath.row)
+                    DispatchQueue.main.async {
+                        self.cartTableView.deleteRows(at: [indexPath], with: .fade)
+                    }
                 } else {
                     // Fail
                 print("Error removing item from cart: \(httpResponse.statusCode)")
                 }
             }
-        }
-        task.resume()
+        }.resume()
     }
     
     /*
